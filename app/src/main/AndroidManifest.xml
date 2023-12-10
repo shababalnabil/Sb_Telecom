@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name=".activities.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ecomflexi"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".sliderAdapter.PayAmount"
+            android:exported="false" />
+        <activity
+            android:name=".sliderAdapter.PayAct"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:exported="true"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:exported="true"
+            android:resource="@color/white" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:exported="true"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:exported="true"
+            android:value="ocr" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivityc"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name=".Myprofile"
+            android:exported="true"
+            android:label="My profile" />
+        <activity
+            android:name=".Twostep"
+            android:exported="true"
+            android:label="Two step" />
+        <activity
+            android:name=".Addpic"
+            android:exported="true"
+            android:label="Scan Id Card" />
+        <activity
+            android:name=".Cropm"
+            android:exported="true"
+            android:label="Crop Image" />
+        <activity
+            android:name=".Billpay"
+            android:exported="true"
+            android:label="Bill pay" />
+        <activity
+            android:name=".New_support"
+            android:exported="true"
+            android:label="New Support Tricket" />
+        <activity
+            android:name=".Tricket_main_read"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name=".Tricket_main"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:label="Create Account" />
+        <activity
+            android:name=".Welcome"
+            android:exported="true"
+            android:label="Service list" />
+        <activity
+            android:name=".Banktransfer"
+            android:exported="true"
+            android:label="Bank Transfer" />
+        <activity
+            android:name=".PinActivity"
+            android:label="Pin Confirm" />
+        <activity
+            android:name=".Mainlist"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name=".News"
+            android:exported="true"
+            android:label="Notice Board" />
+        <activity
+            android:name=".web"
+            android:exported="true"
+            android:label="Welcome" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name=".pinver"
+            android:exported="true"
+            android:label="Pin" />
+        <activity
+            android:name=".DisplayActivity"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name=".DisplayActivitya"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name=".Operator"
+            android:exported="true"
+            android:label="Select Operator" />
+        <activity
+            android:name=".Addres"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name=".Myreseller"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name=".Signin"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name=".Url"
+            android:exported="true"
+            android:label="Add url" />
+        <activity
+            android:name=".Develop"
+            android:exported="true"
+            android:label="About us" />
+        <activity
+            android:name=".service_a"
+            android:exported="true"
+            android:label="Service us" />
+        <activity
+            android:name=".Editres"
+            android:exported="true"
+            android:label="Edit" />
+        <activity
+            android:name=".Payment"
+            android:exported="true"
+            android:label="Payment" />
+        <activity
+            android:name=".Transfer"
+            android:exported="true"
+            android:label="Transfer" />
+        <activity
+            android:name=".Smssend"
+            android:exported="true"
+            android:label="Send Sms" />
+        <activity
+            android:name=".history_op"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name=".Password"
+            android:exported="true"
+            android:label="Password Change" />
+        <activity
+            android:name=".Pinc"
+            android:exported="true"
+            android:label="Pin change" />
+        <activity
+            android:name=".mydevice"
+            android:exported="true"
+            android:label="My Device" />
+        <activity
+            android:name=".makepay"
+            android:exported="true"
+            android:label="Make payment" />
+        <activity
+            android:name=".Internet"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name=".InternetActivity"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name=".Payment_type"
+            android:exported="true"
+            android:label="Payment type" />
+        <activity
+            android:name=".Dlock"
+            android:exported="true"
+            android:label="Device Lock" />
+
+        <receiver
+            android:name=".FirebaseBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.ecomflexi.softwarelabbd" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            tools:replace="android:authorities"
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.com.squareup.picasso"
+            android:exported="false" />
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            tools:replace="android:authorities"
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <receiver
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <receiver
+            android:name="com.onesignal.BootUpReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <receiver
+            android:name="com.onesignal.UpgradeReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <activity android:name=".sliderAdapter.WebActivity" />
+        <activity android:name=".sliderAdapter.AllSliderActivity" />
+        <activity
+            android:name=".activities.ActivitySplash"
+            android:exported="true"
+            android:label="@string/ecommerce_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:label="@string/ecommerce_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ActivityCart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityProductDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityCheckout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityHelp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityImageDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivityNotificationDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivitySettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/Pref" /> <!-- fcm -->
+        <service
+            android:name=".notification.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notification.MyFirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notification.NotificationExtenderExample"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".notification.NotificationExtenderExample"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <activity android:name=".post.NotesDBMain" />
+        <activity
+            android:name=".post.DisplayPostsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.UserCategory"
+            android:exported="false" />
+        <activity
+            android:name=".post.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.UpdatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.GetPosts"
+            android:exported="false" />
+        <activity
+            android:name=".post.UploadPost"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
