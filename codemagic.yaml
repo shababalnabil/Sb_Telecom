@@ -19,6 +19,8 @@ workflows:
             - ls -l "$FCI_BUILD_DIR" 
             - chmod +x "$FCI_BUILD_DIR/gradlew" 
             - "$FCI_BUILD_DIR/gradlew assembleRelease"
+            - "$FCI_BUILD_DIR/gradlew bundleRelease"
         artifacts:
             #- build/outputs/**/**/*.apk
             - app/build/outputs/apk/release/app-release.apk
+            - app/build/outputs/bundle/release/app-release.aab
